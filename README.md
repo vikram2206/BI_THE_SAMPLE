@@ -45,6 +45,8 @@ Now open Adminer → http://localhost:8081
 
 ## 📊 SQL Server DWH
 
+## 📊 SQL Server DWH
+
 Scripts:
 - sqlserver/dwh/20_dim_customer.sql
 - sqlserver/dwh/30_dim_product.sql
@@ -71,4 +73,5 @@ Example KPI Dashboard:
 
 Workflow file:  
 [github-actions.yml](ci/github-actions.yml)
+
 
