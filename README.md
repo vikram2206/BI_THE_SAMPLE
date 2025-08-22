@@ -58,6 +58,9 @@ py -3.13 etl\etl_pipeline.py
   <img src="ci/Adminer.png" alt="KPI view" width="720"/>
 </p>
 
+---
+
+
 ##### SQL Server DWH
 Schema Scripts
 
@@ -74,6 +77,9 @@ These create a star schema (dimensions + fact table) plus reporting views.
   <img src="docs/structure.png" alt="KPI view" width="720"/>
 </p>
 
+---
+
+
 ###### CI/CD with GitHub Actions
 
 The workflow file (ci/github-actions.yml) will:
@@ -85,6 +91,8 @@ Run the Python ETL pipeline
 Verify schema + views
 
 This ensures data pipelines + SQL DWH stay in sync on every push.
+
+---
 
 ######Next Steps
 
