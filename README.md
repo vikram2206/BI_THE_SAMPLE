@@ -58,3 +58,20 @@ py -3.13 etl\etl_pipeline.py
   <img src="ci/Adminer.png" alt="KPI view" width="720"/>
 </p>
 
+##### SQL Server DWH
+Schema Scripts
+
+sqlserver/dwh/20_dim_customer.sql
+
+sqlserver/dwh/30_dim_product.sql
+
+sqlserver/dwh/40_fact_sales.sql
+
+sqlserver/dwh/99_views_reporting.sql
+
+These create a star schema (dimensions + fact table) plus reporting views.
+<p align="center">
+  <img src="docs/structure.png" alt="KPI view" width="720"/>
+</p>
+
+
