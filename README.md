@@ -43,24 +43,32 @@ py -3.13 etl\etl_pipeline.py
 
 Now open Adminer → http://localhost:8081
 
-DB: bi_demo
+## 📊 SQL Server DWH
 
-Run the DWH SQL files in order (no GO needed):
-
-sqlserver/dwh/00_schemas.sql
-
-sqlserver/dwh/10_dim_date.sql
-
-sqlserver/dwh/20_dim_customer.sql
-
-sqlserver/dwh/30_dim_product.sql
-
-sqlserver/dwh/40_fact_sales.sql
-
-sqlserver/dwh/99_views_reporting.sql
+Scripts:
+- sqlserver/dwh/20_dim_customer.sql
+- sqlserver/dwh/30_dim_product.sql
+- sqlserver/dwh/40_fact_sales.sql
+- sqlserver/dwh/99_views_reporting.sql
 
 ---
 
 ## ▶️ Quickstart (Windows)
-![Adminer Login Screenshot](ci/Adminer.png)
+
+📖 Adminer Login Page:  
+![Adminer Screenshot](ci/Adminer.png)
+
+---
+
+## 📈 Power BI Dashboard
+
+Example KPI Dashboard:  
+![Power BI Screenshot](ci/PowerBI.png)
+
+---
+
+## ⚙️ CI/CD with GitHub Actions
+
+Workflow file:  
+[github-actions.yml](ci/github-actions.yml)
 
