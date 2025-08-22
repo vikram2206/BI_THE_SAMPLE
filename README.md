@@ -53,5 +53,8 @@ py -3.13 -m pip install -r etl\requirements.txt
 py -3.13 etl\etl_pipeline.py
 
 ```
-#### ▶️ Quickstart (Windows)
+#### Now open Adminer → http://localhost:8081
+<p align="center">
+  <img src="ci/Adminer.png" alt="KPI view" width="720"/>
+</p>
 
