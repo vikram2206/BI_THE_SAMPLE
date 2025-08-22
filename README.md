@@ -1,11 +1,13 @@
-# BI Demo: SQL Server DWH • Python ETL • Power BI • CI
+# BI Demo: SQL Server DWH • Python ETL • Power BI • CI/CD
 
-End-to-end mini project that mirrors a typical consulting engagement:
-- **ETL** (Python/pandas) loads CSV → `stg.*`
-- **DWH** star schema in SQL Server (`dwh.dim_*`, `dwh.fact_sales`)
-- **KPI View** `dwh.vw_sales_kpis` for reporting
-- **Infra** via Docker + Adminer (SQL GUI)
-- **CI** GitHub Actions: spin up SQL Server and run ETL on every push
+End-to-end mini data project that mirrors a typical consulting engagement:
+
+- **ETL**: Python (pandas) loads CSV → staging tables (`stg.*`)
+- **DWH**: Star schema in SQL Server (`dwh.dim_*`, `dwh.fact_sales`)
+- **KPI Views**: Business-friendly reporting layer (`dwh.vw_sales_kpis`)
+- **Infra**: Docker + Adminer (browser-based SQL GUI)
+- **Reporting**: Power BI dashboard (optional)
+- **CI/CD**: GitHub Actions automatically spin up SQL Server and run ETL on every push
 
 <p align="center">
   <img src="docs/screenshots/kpi_view.png" alt="KPI view" width="720"/>
@@ -13,75 +15,40 @@ End-to-end mini project that mirrors a typical consulting engagement:
 
 ---
 
-
-## ▶️ Quickstart (Windows)
-
-📖 Adminer Login Page:  
-![Adminer Screenshot](ci/Adminer.png)
-
----
-
-
 ## 🔧 Tech Stack
-- **SQL Server 2022** in Docker
+
+- **SQL Server 2022** (in Docker)
 - **Python 3.11+**: pandas, SQLAlchemy, pyodbc, python-dotenv
-- **Adminer** for quick SQL admin (browser)
-- **Power BI Desktop** (optional dashboard)
-- **GitHub Actions** (ODBC 18 on Ubuntu) for CI
+- **Adminer**: lightweight SQL admin GUI (via browser)
+- **Power BI Desktop** (optional dashboard visualization)
+- **GitHub Actions**: CI/CD with ODBC 18 on Ubuntu
 
 ---
 
 ## ▶️ Quickstart (Windows)
 
-> Prereqs: Docker Desktop running, Python installed (`py -3.13 --version`), ODBC Driver 18 installed (you did this).
+### Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) running  
+- Python installed (`py -3.13 --version`)  
+- ODBC Driver 18 for SQL Server installed  
+
+### Setup
 
 ```powershell
 # From repo root
 docker compose -f infra\docker-compose.yml up -d
 
-# (Optional) Create DB once in Adminer: http://localhost:8081
-# System: MS SQL | Server: dwh-sqlserver (or localhost:1433) | User: sa | Pwd: <your SA pwd>
-# SQL: CREATE DATABASE bi_demo;
+# (Optional) Create DB once via Adminer
+# Open: http://localhost:8081
+# System: MS SQL
+# Server: dwh-sqlserver (or localhost:1433)
+# User: sa
+# Pwd: <your SA password>
+# Run SQL: CREATE DATABASE bi_demo;
 
-# Install Python deps
+# Install Python dependencies
 py -3.13 -m pip install -r etl\requirements.txt
 
-# Load CSVs → stg.*
+# Run ETL: Load CSVs → staging tables (stg.*)
 py -3.13 etl\etl_pipeline.py
-
-
-Now open Adminer → http://localhost:8081
-
-## 📊 SQL Server DWH
-
-## 📊 SQL Server DWH
-
-Scripts:
-- sqlserver/dwh/20_dim_customer.sql
-- sqlserver/dwh/30_dim_product.sql
-- sqlserver/dwh/40_fact_sales.sql
-- sqlserver/dwh/99_views_reporting.sql
-
----
-
-##  Repository Structure:
-## Diagram
-
-📖 Adminer Login Page:  
-![Adminer Screenshot](ci/Adminer.png)
-
----
-
-## 📈 Power BI Dashboard
-
-Example KPI Dashboard:  
-![Power BI Screenshot](ci/PowerBI.png)
-
----
-
-## ⚙️ CI/CD with GitHub Actions
-
-Workflow file:  
-[github-actions.yml](ci/github-actions.yml)
-
 
