@@ -52,4 +52,6 @@ py -3.13 -m pip install -r etl\requirements.txt
 # Run ETL: Load CSVs → staging tables (stg.*)
 py -3.13 etl\etl_pipeline.py
 
+```
+#### ▶️ Quickstart (Windows)
 
