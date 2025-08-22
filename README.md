@@ -80,7 +80,7 @@ These create a star schema (dimensions + fact table) plus reporting views.
 ---
 
 
-###### CI/CD with GitHub Actions
+### CI/CD with GitHub Actions
 
 The workflow file (ci/github-actions.yml) will:
 
@@ -94,7 +94,7 @@ This ensures data pipelines + SQL DWH stay in sync on every push.
 
 ---
 
-######Next Steps
+### Next Steps
 
 Extend ETL to include additional sources
 
