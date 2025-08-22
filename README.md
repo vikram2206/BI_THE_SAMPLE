@@ -64,7 +64,8 @@ Scripts:
 
 ---
 
-## ▶️ Quickstart (Windows)
+##  Repository Structure:
+## Diagram
 
 📖 Adminer Login Page:  
 ![Adminer Screenshot](ci/Adminer.png)
