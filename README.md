@@ -59,6 +59,6 @@ sqlserver/dwh/40_fact_sales.sql
 
 sqlserver/dwh/99_views_reporting.sql
 
-📖 Adminer Login Page:  
+## Adminer Login Page:  
 ![Adminer Login Screenshot](ci/Adminer.png)
 
