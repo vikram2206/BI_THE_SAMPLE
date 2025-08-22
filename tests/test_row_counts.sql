@@ -1,0 +1,2 @@
+-- test_row_counts.sql
+-- Example: SELECT COUNT(*) FROM dwh.fact_sales;
