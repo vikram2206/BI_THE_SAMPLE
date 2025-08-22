@@ -13,6 +13,15 @@ End-to-end mini project that mirrors a typical consulting engagement:
 
 ---
 
+
+## ▶️ Quickstart (Windows)
+
+📖 Adminer Login Page:  
+![Adminer Screenshot](ci/Adminer.png)
+
+---
+
+
 ## 🔧 Tech Stack
 - **SQL Server 2022** in Docker
 - **Python 3.11+**: pandas, SQLAlchemy, pyodbc, python-dotenv
