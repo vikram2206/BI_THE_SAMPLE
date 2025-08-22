@@ -10,7 +10,7 @@ End-to-end mini data project that mirrors a typical consulting engagement:
 - **CI/CD**: GitHub Actions automatically spin up SQL Server and run ETL on every push
 
 <p align="center">
-  <img src="docs/screenshots/kpi_view.png" alt="KPI view" width="720"/>
+  <img src="docs/PowerBI.png" alt="KPI view" width="720"/>
 </p>
 
 ---
