@@ -74,4 +74,25 @@ These create a star schema (dimensions + fact table) plus reporting views.
   <img src="docs/structure.png" alt="KPI view" width="720"/>
 </p>
 
+###### CI/CD with GitHub Actions
+
+The workflow file (ci/github-actions.yml) will:
+
+Spin up SQL Server in Docker on CI agent
+
+Run the Python ETL pipeline
+
+Verify schema + views
+
+This ensures data pipelines + SQL DWH stay in sync on every push.
+
+######Next Steps
+
+Extend ETL to include additional sources
+
+Add Slowly Changing Dimensions (SCD) logic
+
+Enhance Power BI dashboards with more KPIs
+
+Deploy DWH + reporting stack to cloud infra (Azure/AWS/GCP)
 
